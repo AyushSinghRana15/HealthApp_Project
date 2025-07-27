@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Health Tracking</title>
+    <link rel="stylesheet" href="App.css">
+    <script defer src="App.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Real-Time Health Tracking</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Feature.html">Features</a></li>
+                <li><a href="Monitor.html">Real-Time Tracking</a></li>
+                <li><a href="Chatbot.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="tracking">
+        <h2>Live Health Metrics</h2>
+        <div class="metric">
+            <h3>Enter Weight (kg)</h3>
+            <input type="number" name="weight" id="weight">
+        </div>
+        <div class="metric">
+            <h3>Enter Height (cm)</h3>
+            <input type="number" name="height" id="height">
+        </div>
+        <div class="metric">
+            <h3>Enter Age</h3>
+            <input type="number" name="age" id="age">
+        </div>
+        <button id="calculateBtn">Calculate BMI</button>
+    </section>
+
+    <p id="output"></p>
+    <p id="condition"></p>
+
+    <script>
+        function calculateBMI() {
+            // Get values from inputs
+            let age = Number(document.getElementById("age").value);
+            let weight = Number(document.getElementById("weight").value);
+            let height = Number(document.getElementById("height").value);
+
+            // Check if values are valid
+            if (!age || !weight || !height) {
+                document.getElementById("output").innerText = "Please enter valid values.";
+                document.getElementById("condition").innerText = "";
+                return;
+            }
+
+            // Convert height from cm to meters
+            let heightInMeters = height / 100;
+            let bmi = weight / (heightInMeters * heightInMeters);
+            let condition = "";
+
+            // Determine health condition based on BMI and age
+            if (age < 18) {
+                if (bmi < 18.5) condition = "Underweight (Consult a doctor for child nutrition)";
+                else if (bmi < 24.9) condition = "Normal weight (Maintain a healthy lifestyle)";
+                else if (bmi < 29.9) condition = "Overweight (Monitor diet and exercise)";
+                else condition = "Obese (High risk - Seek medical advice)";
+            } else if (age < 60) {
+                if (bmi < 18.5) condition = "Underweight (Increase nutrition intake)";
+                else if (bmi < 24.9) condition = "Normal weight (Maintain a balanced diet)";
+                else if (bmi < 29.9) condition = "Overweight (Consider lifestyle changes)";
+                else condition = "Obese (Consult a healthcare professional)";
+            } else {
+                if (bmi < 18.5) condition = "Underweight (Monitor health and nutrition)";
+                else if (bmi < 24.9) condition = "Normal weight (Good! Maintain your lifestyle)";
+                else if (bmi < 29.9) condition = "Overweight (Stay active and maintain diet)";
+                else condition = "Obese (High risk - Seek medical advice)";
+            }
+
+            // Display results
+            document.getElementById("output").innerText = `Your BMI: ${bmi.toFixed(2)}`;
+            document.getElementById("condition").innerText = `Condition: ${condition}`;
+        }
+
+        // Add event listener for the button
+        document.getElementById("calculateBtn").addEventListener("click", calculateBMI);
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Health Monitor. All rights reserved.</p>
+    </footer>
+</body>
+</html>

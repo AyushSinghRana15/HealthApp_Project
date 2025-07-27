@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Feature.html">Features</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Reward.html">Rewards</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+    </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #4CAF50;
+            width: 0%;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+        button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <img src="/Images/ad copy.png">
+<h1>Your Rewards</h1>
+    <div class="card">
+        <p><strong>Points Earned:</strong> <span id="userPoints">450</span></p>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar">45%</div>
+        </div>
+    </div>
+    <h2>Redeem Rewards</h2>
+    <div id="rewardsList"></div>
+    <script>
+        let userPoints = 450;
+        const rewards = [
+            { id: 1, name: "Free Health Checkup", points: 500 },
+            { id: 2, name: "Discount on Medicines", points: 300 },
+            { id: 3, name: "Gym Membership Discount", points: 700 }
+        ];
+
+        function updateUI() {
+            document.getElementById("userPoints").textContent = userPoints;
+            document.getElementById("progressBar").style.width = (userPoints / 1000) * 100 + "%";
+            document.getElementById("progressBar").textContent = Math.round((userPoints / 1000) * 100) + "%";
+            
+            const rewardsList = document.getElementById("rewardsList");
+            rewardsList.innerHTML = "";
+            rewards.forEach(reward => {
+                const rewardItem = document.createElement("div");
+                rewardItem.className = "card";
+                rewardItem.innerHTML = `
+                    <p>${reward.name} - ${reward.points} Points</p>
+                    <button onclick="redeemReward(${reward.points})" ${userPoints < reward.points ? "disabled" : ""}>Redeem</button>
+                `;
+                rewardsList.appendChild(rewardItem);
+            });
+        }
+
+        function redeemReward(points) {
+            if (userPoints >= points) {
+                userPoints -= points;
+                updateUI();
+            }
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>

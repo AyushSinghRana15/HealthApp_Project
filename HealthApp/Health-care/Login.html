@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            justify-content: center;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 7px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginBtn">Login</button>
+        <p id="message" style="color: red;"></p>
+    </div>
+
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", async function () {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (!username || !password) {
+                document.getElementById("message").innerText = "Please enter both fields.";
+                return;
+            }
+
+            try {
+                const response = await fetch("http://127.0.0.1:5000/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    document.getElementById("message").style.color = "green";
+                    document.getElementById("message").innerText = "Login successful!";
+                    // Redirect user
+                    window.location.href = "dashboard.html"; // Change this to your actual dashboard
+                } else {
+                    document.getElementById("message").innerText = data.error;
+                }
+            } catch (error) {
+                document.getElementById("message").innerText = "Error logging in.";
+            }
+        });
+    </script>
+</body>
+</html>

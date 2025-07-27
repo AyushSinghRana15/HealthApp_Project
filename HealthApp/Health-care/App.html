@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <header>
+        <h1>AI-Based Disease Prediction</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Feature.html">Features</a></li>
+                <li><a href="Monitor.html">Real-Time Tracking</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="prediction">
+        <h2>Enter Symptoms</h2>
+        <input type="text" id="symptomsInput" placeholder="e.g. Fever, Cough, Headache">
+        <button onclick="predictDisease()">Predict Disease</button>
+        <p id="result"></p>
+    </section>
+
+    <script>
+        async function predictDisease() {
+            const symptoms = document.getElementById("symptomsInput").value.split(", ");
+            try{
+            const response = await fetch("http://127.0.0.1:5000/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ symptoms: symptoms })
+            });
+
+            const data = await response.json();
+            console.log("Predicted Disease:", data.predicted_disease);
+            document.getElementById("result").innerText = "Predicted Disease: " + data.predicted_disease;
+        }catch (error) {
+        console.error("Error fetching prediction:", error);
+        document.getElementById("result").innerText = "Error fetching prediction.";
+    }
+}
+document.getElementById("predictBtn").addEventListener("click", predictDisease);
+</script>
+
+       <script src="App.js"></script>
+
+    <footer>
+        <p>&copy; 2025 Health Monitor. All rights reserved.</p>
+       
+    </footer>
+</body>
+</html>
