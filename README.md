@@ -1,4 +1,4 @@
-# 🧠 AI-Based Disease Prediction and Health Monitoring App
+# 🧠 AI-Based Disease Prediction and Health Recommendation App
 
 This project is a smart web-based healthcare assistant that utilizes AI to predict diseases based on symptoms, track real-time health metrics (like BMI), and interact with users through a chatbot for health-related queries. The platform is user-friendly, informative, and offers basic health suggestions to promote awareness.
 
