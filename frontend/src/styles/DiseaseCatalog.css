@@ -136,6 +136,7 @@
   transition: all var(--transition-base);
   opacity: 0;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .catalog-card:hover {
@@ -246,6 +247,22 @@
 .card-details {
   padding: 0 20px 20px;
   opacity: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+.card-details::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-details::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-details::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
 }
 
 .disease-desc {
@@ -414,7 +431,16 @@
   color: var(--color-primary);
 }
 
-.remmedies-header,
+.tab-content {
+  min-width: 0;
+}
+
+.tab-content p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.remedies-header,
 .diet-header,
 .lifestyle-header {
   margin-bottom: 16px;
@@ -471,6 +497,9 @@
   font-size: 13px;
   line-height: 1.6;
   color: var(--color-text-secondary);
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .diet-content {
@@ -517,6 +546,9 @@
   font-size: 13px;
   line-height: 1.5;
   color: var(--color-text-secondary);
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .lifestyle-list {
@@ -554,6 +586,9 @@
   font-size: 13px;
   line-height: 1.6;
   color: var(--color-text-secondary);
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 768px) {
