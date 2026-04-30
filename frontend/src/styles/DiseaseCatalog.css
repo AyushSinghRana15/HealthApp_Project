@@ -112,14 +112,16 @@
   opacity: 0;
 }
 
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
+  align-items: flex-start;
 }
 
-.catalog-grid.detailed {
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+.catalog-card {
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 280px;
 }
 
 .catalog-card {
@@ -363,10 +365,205 @@
   font-size: 16px;
 }
 
+.card-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: 16px;
+}
+
+.card-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-radius: 0;
+}
+
+.card-tab:hover {
+  color: var(--color-text-secondary);
+  background: rgba(37, 99, 235, 0.03);
+}
+
+.card-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.tab-icon {
+  font-size: 14px;
+}
+
+.tab-label {
+  white-space: nowrap;
+}
+
+.symptom-tag.related {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.15);
+  color: var(--color-primary);
+}
+
+.remmedies-header,
+.diet-header,
+.lifestyle-header {
+  margin-bottom: 16px;
+}
+
+.remedies-header h4,
+.diet-header h4,
+.lifestyle-header h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.remedies-note,
+.diet-note,
+.lifestyle-note {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.remedies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.remedy-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.remedy-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.remedy-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.diet-content {
+  margin-top: 12px;
+}
+
+.diet-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.diet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.diet-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.diet-item.recommended {
+  background: rgba(34, 197, 94, 0.05);
+  border-color: rgba(34, 197, 94, 0.15);
+}
+
+.diet-item.avoid {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+.diet-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.diet-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.lifestyle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.lifestyle-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+}
+
+.lifestyle-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.lifestyle-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
 @media (max-width: 768px) {
-  .catalog-grid,
-  .catalog-grid.detailed {
-    grid-template-columns: 1fr;
+  .catalog-list {
+    flex-direction: column;
+  }
+
+  .catalog-card {
+    flex: 1 1 100%;
+    min-width: unset;
   }
 
   .catalog-controls {

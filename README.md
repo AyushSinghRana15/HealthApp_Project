@@ -20,7 +20,12 @@ A modern, AI-powered healthcare web application with ensemble ML disease predict
 - **Multi-step Workflow**: Select → Review → Predict flow
 - **Responsive Design**: Mobile-first with hamburger navigation
 - **Health Tracker**: BMI calculator with persistent history (localStorage)
-- **Disease Encyclopedia**: Browseable catalog with search
+- **Disease Encyclopedia**: Browseable catalog with search, severity filters, and expandable cards
+  - **Overview Tab**: Description, symptoms (primary + related), duration, treatment, and doctor warning
+  - **Remedies Tab**: Home remedies and natural treatments with step-by-step guidance
+  - **Diet Tab**: Recommended foods and items to avoid, color-coded for quick reference
+  - **Lifestyle Tab**: Daily habits, prevention tips, and recovery guidelines
+  - **55+ diseases** with comprehensive, medically-informed data
 
 ### API
 - `/predict` — Disease prediction with symptom validation
@@ -125,6 +130,37 @@ PYTHONPATH="." python -m pytest tests/ -v
 - Ensemble weighting: RF (35%), XGBoost (30%), NN (20%), KNN (15%)
 
 > **Note**: The current dataset has 1 sample per disease. For production use, collect more training data (multiple patient records per disease with symptom variations) to improve generalization accuracy.
+
+---
+
+## 📖 Disease Encyclopedia
+
+The Disease Encyclopedia provides comprehensive information for 55+ diseases with four detailed tabs:
+
+### Overview Tab
+- **Description**: Detailed explanation of the condition
+- **Primary Symptoms**: Key symptoms for identification
+- **Related Symptoms**: Additional associated symptoms
+- **Duration**: Expected timeline of the condition
+- **Medical Treatment**: Standard clinical interventions
+- **When to See a Doctor**: Warning signs requiring immediate attention
+
+### Remedies Tab
+- Numbered home remedies and natural treatments
+- Complementary approaches (not replacements for medical care)
+- Evidence-based traditional remedies
+
+### Diet Tab
+- ✅ Recommended foods (green-coded)
+- 🚫 Foods to avoid (red-coded)
+- Nutritional guidance for recovery and management
+
+### Lifestyle Tab
+- Daily habits supporting recovery
+- Prevention tips and long-term management
+- Activity recommendations and restrictions
+
+Each disease is tagged with a **severity level** (low, moderate, high) with color-coded badges and filterable controls.
 
 ---
 
