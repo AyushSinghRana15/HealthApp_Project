@@ -1,0 +1,116 @@
+.disease-catalog {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.catalog-header {
+  text-align: center;
+  margin-bottom: 32px;
+  opacity: 0;
+}
+
+.catalog-header h1 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.catalog-header p {
+  color: var(--color-text-secondary);
+}
+
+.catalog-search {
+  max-width: 500px;
+  margin: 0 auto 32px;
+  opacity: 0;
+}
+
+.catalog-search input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+  background: var(--color-surface);
+  transition: all var(--transition-base);
+}
+
+.catalog-search input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.count-badge {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.catalog-card {
+  padding: 20px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all var(--transition-base);
+  opacity: 0;
+}
+
+.catalog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.catalog-card:hover .card-icon {
+  background: var(--color-primary);
+  color: white;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: all var(--transition-spring);
+}
+
+.catalog-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.catalog-card.skeleton {
+  height: 80px;
+  background: linear-gradient(90deg, var(--color-surface-alt) 25%, var(--color-border-light) 50%, var(--color-surface-alt) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .catalog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}

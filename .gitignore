@@ -1,0 +1,9 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+*.keras
+.env
+.DS_Store
+*.log
+coverage/

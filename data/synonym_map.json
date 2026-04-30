@@ -1,0 +1,554 @@
+{
+  "canonical_to_aliases": {
+    "fever": [
+      "high temperature",
+      "pyrexia",
+      "high fever",
+      "temperature",
+      "feverish",
+      "hot body"
+    ],
+    "cough": [
+      "coughing",
+      "dry cough",
+      "wet cough",
+      "persistent cough",
+      "chronic cough"
+    ],
+    "fatigue": [
+      "tiredness",
+      "weakness",
+      "exhaustion",
+      "lack of energy",
+      "lethargy",
+      "low energy"
+    ],
+    "headache": [
+      "head pain",
+      "head ache",
+      "pain in head"
+    ],
+    "nausea": [
+      "feeling sick",
+      "queasiness",
+      "urge to vomit"
+    ],
+    "vomiting": [
+      "throwing up",
+      "emesis",
+      "vomit"
+    ],
+    "diarrhea": [
+      "loose stools",
+      "loose motion",
+      "watery stool",
+      "frequent stool"
+    ],
+    "shortness of breath": [
+      "breathlessness",
+      "difficulty breathing",
+      "trouble breathing",
+      "breathing difficulty",
+      "dyspnea"
+    ],
+    "chest pain": [
+      "chest discomfort",
+      "pain in chest"
+    ],
+    "chest tightness": [
+      "tight chest",
+      "chest constriction"
+    ],
+    "joint pain": [
+      "aching joints",
+      "painful joints",
+      "arthralgia"
+    ],
+    "muscle pain": [
+      "body ache",
+      "body aches",
+      "myalgia",
+      "muscle ache",
+      "pain in muscles"
+    ],
+    "sore throat": [
+      "throat pain"
+    ],
+    "runny nose": [
+      "nasal discharge",
+      "runny nasal",
+      "dripping nose"
+    ],
+    "night sweats": [
+      "sweating at night",
+      "nighttime sweating"
+    ],
+    "weight loss": [
+      "losing weight",
+      "unexplained weight loss"
+    ],
+    "loss of appetite": [
+      "no appetite"
+    ],
+    "blurred vision": [
+      "blurry vision",
+      "vision blurring",
+      "unclear vision"
+    ],
+    "abdominal pain": [
+      "stomach pain",
+      "belly pain",
+      "pain in abdomen",
+      "stomach ache"
+    ],
+    "swelling": [
+      "inflammation",
+      "swollen"
+    ],
+    "rash": [
+      "skin rash",
+      "red rash",
+      "itchy rash"
+    ],
+    "dizziness": [
+      "lightheadedness",
+      "feeling dizzy",
+      "vertigo"
+    ],
+    "pale skin": [
+      "paleness",
+      "pale complexion"
+    ],
+    "cold hands and feet": [
+      "cold extremities"
+    ],
+    "loss of taste or smell": [
+      "loss of taste",
+      "loss of smell",
+      "anosmia",
+      "ageusia"
+    ],
+    "stiffness": [
+      "stiff joints",
+      "rigidity"
+    ],
+    "reduced range of motion": [
+      "limited movement",
+      "restricted movement"
+    ],
+    "sensitivity to light": [
+      "light sensitivity",
+      "photophobia"
+    ],
+    "sensitivity to sound": [
+      "sound sensitivity",
+      "phonophobia"
+    ],
+    "swollen lymph nodes": [
+      "swollen glands",
+      "enlarged lymph nodes"
+    ],
+    "red eyes": [
+      "eye redness",
+      "bloodshot eyes"
+    ],
+    "difficulty swallowing": [
+      "trouble swallowing",
+      "swallowing difficulty",
+      "dysphagia"
+    ],
+    "frequent urination": [
+      "urinating frequently"
+    ],
+    "increased thirst": [
+      "excessive thirst"
+    ],
+    "bloating": [
+      "abdominal bloating",
+      "stomach bloating",
+      "swollen stomach"
+    ],
+    "heartburn": [
+      "acid reflux",
+      "burning chest"
+    ],
+    "stomach pain": [
+      "abdominal pain",
+      "belly ache"
+    ],
+    "wheezing": [
+      "wheezing sound",
+      "whistling breath"
+    ],
+    "difficulty breathing": [
+      "trouble breathing",
+      "breathing difficulty"
+    ],
+    "pain behind eyes": [
+      "eye pain",
+      "retro-orbital pain"
+    ],
+    "burning stomach pain": [
+      "burning stomach ache",
+      "burning sensation in stomach"
+    ],
+    "burning urination": [
+      "painful urination",
+      "burning while urinating"
+    ],
+    "blood in urine": [
+      "bloody urine",
+      "hematuria"
+    ],
+    "blood in stool": [
+      "bloody stool",
+      "rectal bleeding"
+    ],
+    "nipple discharge": [
+      "discharge from nipple"
+    ],
+    "lump in breast": [
+      "breast lump",
+      "breast mass"
+    ],
+    "skin changes": [
+      "changes in skin"
+    ],
+    "mole changes": [
+      "changing moles",
+      "changing mole"
+    ],
+    "skin lesions": [
+      "lesions on skin"
+    ],
+    "easy bruising": [
+      "bruises easily",
+      "bruising easily"
+    ],
+    "frequent infections": [
+      "recurring infections",
+      "recurrent infections"
+    ],
+    "memory loss": [
+      "forgetfulness",
+      "poor memory"
+    ],
+    "confusion": [
+      "disorientation",
+      "mental confusion"
+    ],
+    "difficulty communicating": [
+      "trouble speaking",
+      "speech difficulty"
+    ],
+    "mood changes": [
+      "mood swings",
+      "changes in mood"
+    ],
+    "kidney problems": [
+      "kidney issues"
+    ],
+    "numbness": [
+      "tingling",
+      "loss of sensation"
+    ],
+    "tremors": [
+      "shaking",
+      "trembling"
+    ],
+    "slow movement": [
+      "slowed movement",
+      "bradykinesia"
+    ],
+    "loss of balance": [
+      "balance problems",
+      "unsteady"
+    ],
+    "lockjaw": [
+      "jaw stiffness",
+      "jaw lock"
+    ],
+    "muscle stiffness": [
+      "stiff muscles"
+    ],
+    "anxiety": [
+      "nervousness",
+      "feeling anxious"
+    ],
+    "hydrophobia": [
+      "fear of water"
+    ],
+    "excess salivation": [
+      "drooling",
+      "excessive saliva"
+    ],
+    "paralysis": [
+      "loss of movement",
+      "unable to move"
+    ],
+    "severe headache": [
+      "bad headache",
+      "intense headache"
+    ],
+    "severe abdominal pain": [
+      "intense stomach pain",
+      "severe belly pain"
+    ],
+    "severe diarrhea": [
+      "severe loose motion"
+    ],
+    "severe fever": [
+      "very high fever"
+    ],
+    "mild fever": [
+      "low grade fever",
+      "low-grade fever"
+    ],
+    "high fever": [
+      "very high temperature"
+    ],
+    "bleeding": [
+      "hemorrhage"
+    ],
+    "organ failure": [
+      "organ dysfunction"
+    ],
+    "leg cramps": [
+      "muscle cramps in legs"
+    ],
+    "dehydration": [
+      "dehydrated"
+    ],
+    "chills": [
+      "chilly",
+      "feeling cold"
+    ],
+    "sweating": [
+      "perspiration",
+      "excessive sweating"
+    ],
+    "itching": [
+      "itchy",
+      "pruritus"
+    ],
+    "loss of taste": [
+      "cannot taste"
+    ],
+    "loss of smell": [
+      "cannot smell"
+    ],
+    "stiff neck": [
+      "neck stiffness"
+    ],
+    "coughing fits": [
+      "coughing spells",
+      "severe coughing"
+    ],
+    "swollen tonsils": [
+      "enlarged tonsils"
+    ],
+    "jaundice": [
+      "yellowing of skin",
+      "yellow skin",
+      "yellow eyes"
+    ],
+    "dark urine": [
+      "dark colored urine"
+    ],
+    "bloody diarrhea": [
+      "blood in diarrhea"
+    ],
+    "itchy rash": [
+      "itching rash"
+    ],
+    "unexplained weight loss": [
+      "weight loss without trying"
+    ]
+  },
+  "reverse_map": {
+    "high temperature": "fever",
+    "pyrexia": "fever",
+    "high fever": "fever",
+    "temperature": "fever",
+    "feverish": "fever",
+    "hot body": "fever",
+    "coughing": "cough",
+    "dry cough": "cough",
+    "wet cough": "cough",
+    "persistent cough": "cough",
+    "chronic cough": "cough",
+    "tiredness": "fatigue",
+    "weakness": "fatigue",
+    "exhaustion": "fatigue",
+    "lack of energy": "fatigue",
+    "lethargy": "fatigue",
+    "low energy": "fatigue",
+    "head pain": "headache",
+    "head ache": "headache",
+    "pain in head": "headache",
+    "feeling sick": "nausea",
+    "queasiness": "nausea",
+    "urge to vomit": "nausea",
+    "throwing up": "vomiting",
+    "emesis": "vomiting",
+    "vomit": "vomiting",
+    "loose stools": "diarrhea",
+    "loose motion": "diarrhea",
+    "watery stool": "diarrhea",
+    "frequent stool": "diarrhea",
+    "breathlessness": "shortness of breath",
+    "difficulty breathing": "shortness of breath",
+    "trouble breathing": "difficulty breathing",
+    "breathing difficulty": "difficulty breathing",
+    "dyspnea": "shortness of breath",
+    "chest discomfort": "chest pain",
+    "pain in chest": "chest pain",
+    "tight chest": "chest tightness",
+    "chest constriction": "chest tightness",
+    "aching joints": "joint pain",
+    "painful joints": "joint pain",
+    "arthralgia": "joint pain",
+    "body ache": "muscle pain",
+    "body aches": "muscle pain",
+    "myalgia": "muscle pain",
+    "muscle ache": "muscle pain",
+    "pain in muscles": "muscle pain",
+    "throat pain": "sore throat",
+    "nasal discharge": "runny nose",
+    "runny nasal": "runny nose",
+    "dripping nose": "runny nose",
+    "sweating at night": "night sweats",
+    "nighttime sweating": "night sweats",
+    "losing weight": "weight loss",
+    "unexplained weight loss": "weight loss",
+    "no appetite": "loss of appetite",
+    "blurry vision": "blurred vision",
+    "vision blurring": "blurred vision",
+    "unclear vision": "blurred vision",
+    "stomach pain": "abdominal pain",
+    "belly pain": "abdominal pain",
+    "pain in abdomen": "abdominal pain",
+    "stomach ache": "abdominal pain",
+    "inflammation": "swelling",
+    "swollen": "swelling",
+    "skin rash": "rash",
+    "red rash": "rash",
+    "itchy rash": "rash",
+    "lightheadedness": "dizziness",
+    "feeling dizzy": "dizziness",
+    "vertigo": "dizziness",
+    "paleness": "pale skin",
+    "pale complexion": "pale skin",
+    "cold extremities": "cold hands and feet",
+    "loss of taste": "loss of taste or smell",
+    "loss of smell": "loss of taste or smell",
+    "anosmia": "loss of taste or smell",
+    "ageusia": "loss of taste or smell",
+    "stiff joints": "stiffness",
+    "rigidity": "stiffness",
+    "limited movement": "reduced range of motion",
+    "restricted movement": "reduced range of motion",
+    "light sensitivity": "sensitivity to light",
+    "photophobia": "sensitivity to light",
+    "sound sensitivity": "sensitivity to sound",
+    "phonophobia": "sensitivity to sound",
+    "swollen glands": "swollen lymph nodes",
+    "enlarged lymph nodes": "swollen lymph nodes",
+    "eye redness": "red eyes",
+    "bloodshot eyes": "red eyes",
+    "trouble swallowing": "difficulty swallowing",
+    "swallowing difficulty": "difficulty swallowing",
+    "dysphagia": "difficulty swallowing",
+    "urinating frequently": "frequent urination",
+    "excessive thirst": "increased thirst",
+    "abdominal bloating": "bloating",
+    "stomach bloating": "bloating",
+    "swollen stomach": "bloating",
+    "acid reflux": "heartburn",
+    "burning chest": "heartburn",
+    "abdominal pain": "stomach pain",
+    "belly ache": "stomach pain",
+    "wheezing sound": "wheezing",
+    "whistling breath": "wheezing",
+    "eye pain": "pain behind eyes",
+    "retro-orbital pain": "pain behind eyes",
+    "burning stomach ache": "burning stomach pain",
+    "burning sensation in stomach": "burning stomach pain",
+    "painful urination": "burning urination",
+    "burning while urinating": "burning urination",
+    "bloody urine": "blood in urine",
+    "hematuria": "blood in urine",
+    "bloody stool": "blood in stool",
+    "rectal bleeding": "blood in stool",
+    "discharge from nipple": "nipple discharge",
+    "breast lump": "lump in breast",
+    "breast mass": "lump in breast",
+    "changes in skin": "skin changes",
+    "changing moles": "mole changes",
+    "changing mole": "mole changes",
+    "lesions on skin": "skin lesions",
+    "bruises easily": "easy bruising",
+    "bruising easily": "easy bruising",
+    "recurring infections": "frequent infections",
+    "recurrent infections": "frequent infections",
+    "forgetfulness": "memory loss",
+    "poor memory": "memory loss",
+    "disorientation": "confusion",
+    "mental confusion": "confusion",
+    "trouble speaking": "difficulty communicating",
+    "speech difficulty": "difficulty communicating",
+    "mood swings": "mood changes",
+    "changes in mood": "mood changes",
+    "kidney issues": "kidney problems",
+    "tingling": "numbness",
+    "loss of sensation": "numbness",
+    "shaking": "tremors",
+    "trembling": "tremors",
+    "slowed movement": "slow movement",
+    "bradykinesia": "slow movement",
+    "balance problems": "loss of balance",
+    "unsteady": "loss of balance",
+    "jaw stiffness": "lockjaw",
+    "jaw lock": "lockjaw",
+    "stiff muscles": "muscle stiffness",
+    "nervousness": "anxiety",
+    "feeling anxious": "anxiety",
+    "fear of water": "hydrophobia",
+    "drooling": "excess salivation",
+    "excessive saliva": "excess salivation",
+    "loss of movement": "paralysis",
+    "unable to move": "paralysis",
+    "bad headache": "severe headache",
+    "intense headache": "severe headache",
+    "intense stomach pain": "severe abdominal pain",
+    "severe belly pain": "severe abdominal pain",
+    "severe loose motion": "severe diarrhea",
+    "very high fever": "severe fever",
+    "low grade fever": "mild fever",
+    "low-grade fever": "mild fever",
+    "very high temperature": "high fever",
+    "hemorrhage": "bleeding",
+    "organ dysfunction": "organ failure",
+    "muscle cramps in legs": "leg cramps",
+    "dehydrated": "dehydration",
+    "chilly": "chills",
+    "feeling cold": "chills",
+    "perspiration": "sweating",
+    "excessive sweating": "sweating",
+    "itchy": "itching",
+    "pruritus": "itching",
+    "cannot taste": "loss of taste",
+    "cannot smell": "loss of smell",
+    "neck stiffness": "stiff neck",
+    "coughing spells": "coughing fits",
+    "severe coughing": "coughing fits",
+    "enlarged tonsils": "swollen tonsils",
+    "yellowing of skin": "jaundice",
+    "yellow skin": "jaundice",
+    "yellow eyes": "jaundice",
+    "dark colored urine": "dark urine",
+    "blood in diarrhea": "bloody diarrhea",
+    "itching rash": "itchy rash",
+    "weight loss without trying": "unexplained weight loss"
+  }
+}

@@ -1,0 +1,184 @@
+.health-tracker {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tracker-header {
+  text-align: center;
+  margin-bottom: 32px;
+  opacity: 0;
+}
+
+.tracker-header h1 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.tracker-header p {
+  color: var(--color-text-secondary);
+}
+
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tracker-card {
+  padding: 28px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  opacity: 0;
+}
+
+.tracker-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  transition: all var(--transition-base);
+  background: var(--color-surface-alt);
+}
+
+.input-group input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  background: var(--color-surface);
+}
+
+.result-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.bmi-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 6px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-alt);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.bmi-value {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bmi-label {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.bmi-category {
+  padding: 8px 24px;
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 20px;
+}
+
+.empty-icon {
+  font-size: 48px;
+}
+
+.empty-state p {
+  color: var(--color-text-muted);
+}
+
+.history-card {
+  padding: 28px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  opacity: 0;
+}
+
+.history-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.history-date {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.history-bmi {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.history-category {
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .tracker-grid {
+    grid-template-columns: 1fr;
+  }
+}
