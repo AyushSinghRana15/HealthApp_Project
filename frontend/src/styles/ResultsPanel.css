@@ -223,6 +223,7 @@
   padding: 8px 0;
   border-bottom: 1px solid var(--color-border-light);
   font-size: 14px;
+  flex-wrap: wrap;
 }
 
 .correction-row:last-child {
@@ -233,16 +234,19 @@
   color: var(--color-danger);
   text-decoration: line-through;
   text-transform: capitalize;
+  word-break: break-word;
 }
 
 .arrow {
   color: var(--color-text-muted);
+  flex-shrink: 0;
 }
 
 .corrected {
   color: var(--color-success);
   font-weight: 600;
   text-transform: capitalize;
+  word-break: break-word;
 }
 
 .results-actions {
@@ -281,5 +285,25 @@
   .results-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .prediction-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .results-panel {
+    padding: 12px;
+  }
+
+  .prediction-card {
+    padding: 16px;
+  }
+
+  .prediction-rank {
+    font-size: 28px;
   }
 }

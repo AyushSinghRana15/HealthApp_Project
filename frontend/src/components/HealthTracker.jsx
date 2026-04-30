@@ -18,6 +18,7 @@ export function HealthTracker() {
     if (!w || !h || h === 0) return;
     const bmi = w / (h * h);
     const entry = {
+      id: Date.now(),
       date: new Date().toLocaleDateString(),
       bmi: bmi.toFixed(1),
       weight: w,
@@ -94,7 +95,7 @@ export function HealthTracker() {
             {history.map((entry, i) => {
               const cat = getCategory(parseFloat(entry.bmi));
               return (
-                <div key={i} className="history-item" style={{ animationDelay: `${i * 0.05}s` }}>
+                <div key={entry.id} className="history-item" style={{ animationDelay: `${i * 0.05}s` }}>
                   <span className="history-date">{entry.date}</span>
                   <span className="history-bmi" style={{ color: cat.color }}>{entry.bmi}</span>
                   <span className="history-category" style={{ background: cat.bg, color: cat.color }}>

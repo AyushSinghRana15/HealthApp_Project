@@ -49,6 +49,7 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #root {
@@ -123,6 +124,7 @@ body {
 .animate-fade-in { animation: fadeIn 0.5s ease forwards; }
 .animate-fade-in-up { animation: fadeInUp 0.6s ease forwards; }
 .animate-fade-in-down { animation: fadeInDown 0.4s ease forwards; }
+.animate-fade-in-left { animation: fadeInLeft 0.4s ease forwards; }
 .animate-slide-in-scale { animation: slideInScale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
 .animate-float { animation: float 3s ease-in-out infinite; }
 
@@ -139,6 +141,11 @@ button {
   outline: none;
 }
 
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -147,6 +154,13 @@ button:disabled {
 input, textarea, select {
   font-family: var(--font-sans);
   outline: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 ::-webkit-scrollbar {

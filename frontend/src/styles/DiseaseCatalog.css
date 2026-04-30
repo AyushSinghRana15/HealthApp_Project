@@ -122,9 +122,6 @@
 .catalog-card {
   flex: 1 1 calc(33.333% - 16px);
   min-width: 280px;
-}
-
-.catalog-card {
   padding: 20px;
   background: var(--color-surface);
   border-radius: var(--radius-md);
@@ -303,6 +300,12 @@
   color: var(--color-text-secondary);
 }
 
+.symptom-tag.related {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.15);
+  color: var(--color-primary);
+}
+
 .detail-row {
   margin-bottom: 16px;
 }
@@ -423,12 +426,6 @@
 
 .tab-label {
   white-space: nowrap;
-}
-
-.symptom-tag.related {
-  background: rgba(37, 99, 235, 0.05);
-  border-color: rgba(37, 99, 235, 0.15);
-  color: var(--color-primary);
 }
 
 .tab-content {
@@ -603,5 +600,15 @@
 
   .catalog-controls {
     padding: 0 8px;
+  }
+
+  .card-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .card-tab {
+    flex-shrink: 0;
   }
 }

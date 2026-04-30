@@ -22,7 +22,7 @@
 
 .tracker-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-bottom: 32px;
 }
@@ -177,8 +177,27 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .tracker-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .health-tracker {
+    padding: 12px;
+  }
+
+  .tracker-card {
+    padding: 20px;
+  }
+
+  .bmi-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bmi-value {
+    font-size: 36px;
   }
 }

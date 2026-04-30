@@ -192,12 +192,15 @@ export function DiseaseCatalog() {
                               <p className="diet-text">{data.diet}</p>
                             ) : (
                               <div className="diet-list">
-                                {data.diet.map((item, idx) => (
-                                  <div key={idx} className={`diet-item ${item.startsWith('AVOID') || item.startsWith('STRICTLY') || item.startsWith('Limit') || item.startsWith('Reduce') ? 'avoid' : 'recommended'}`}>
-                                    <span className="diet-icon">{item.startsWith('AVOID') || item.startsWith('STRICTLY') || item.startsWith('Limit') || item.startsWith('Reduce') ? '🚫' : '✅'}</span>
-                                    <p>{item.replace(/^(AVOID|STRICTLY AVOID|Limit|Reduce):\s*/i, '')}</p>
-                                  </div>
-                                ))}
+                                {data.diet.map((item, idx) => {
+                                  const isAvoid = /^(avoid|strictly|limit|reduce)/i.test(item);
+                                  return (
+                                    <div key={idx} className={`diet-item ${isAvoid ? 'avoid' : 'recommended'}`}>
+                                      <span className="diet-icon">{isAvoid ? '🚫' : '✅'}</span>
+                                      <p>{item.replace(/^(AVOID|STRICTLY AVOID|Limit|Reduce):\s*/i, '')}</p>
+                                    </div>
+                                  );
+                                })}
                               </div>
                             )}
                           </div>

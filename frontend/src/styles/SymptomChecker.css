@@ -393,3 +393,29 @@
     padding: 10px 16px;
   }
 }
+
+@media (max-width: 400px) {
+  .progress-bar {
+    padding: 14px 12px;
+  }
+
+  .progress-connector {
+    width: 24px;
+    margin: 0 4px;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .checker-header h1 {
+    font-size: 22px;
+  }
+
+  .symptom-chip {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
